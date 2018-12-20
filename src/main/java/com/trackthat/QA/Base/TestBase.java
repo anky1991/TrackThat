@@ -49,6 +49,8 @@ public class TestBase {
 		 driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		 driver.get(prop.getProperty("Url"));
 		 System.out.println("plase");
+		 System.out.println("plase");
+
 		}
 	}
 
