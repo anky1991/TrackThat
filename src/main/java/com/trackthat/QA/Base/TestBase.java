@@ -10,8 +10,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 /*Framework Created By Ankit Sharmma*/
 //Base class contain all properties
 public class TestBase {  
-	static WebDriver driver;
-	static Properties prop;
+	public static WebDriver dr;
+	public static Properties prop;
 	public TestBase(){
 		try 
 		{
@@ -36,18 +36,18 @@ public class TestBase {
 		if(BrowserName.equals("Chrome")) 
 		{
 			System.setProperty("webdriver.chrome.driver","/home/ankitsharma/Documents/chromedriver");
-			driver=new ChromeDriver();
+			dr=new ChromeDriver();
 		}
 		else if(BrowserName.equals("FF"))
 		{
 		    System.setProperty("webdriver.gecko.driver","//home//ankitsharma//Downloads//geckodriver");		
-		    driver =new FirefoxDriver();
+		    dr =new FirefoxDriver();
 		}
-		 driver.manage().window().maximize();
-		 driver.manage().deleteAllCookies();
-		 driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-		 driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		 driver.get(prop.getProperty("Url"));
+		 dr.manage().window().maximize();
+		 dr.manage().deleteAllCookies();
+		 dr.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+		 dr.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		 dr.get(prop.getProperty("Url"));
 		}
 	}
 
